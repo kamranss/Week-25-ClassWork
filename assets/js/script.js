@@ -46,7 +46,9 @@ let arrDemention = [1,2,[1,2,3,4]];
 console.log(arrDemention[2,1]);
 
 
-// Foreach, map, filter, reduce
+// Usefull methods
+
+//Foreach, map, filter-> new arr, reduce -> value, every->returns true/false, sum
 
 /* foreach for arr  -> forrach accepts arrow function */
 let numbers = [1,2,3,4,5,6]
@@ -99,5 +101,47 @@ let users =[
 ]
 
 let sumSalary = users.filter(user=> user.salary>200).reduce((prev,nect)=>prev.salary+=nex.salary);
+
+// every returns true or false it checkes all elements of the array
+let result = numbers.every((val,index)=> val>20);
+
+// SUM returns true or false it checkes all elements of the array but if one of the element equals to condition it will return true else false
+let result2 = numbers.sum((val,index)=> val>20);
+
+
+// String and its methods
+
+let word = "Hi my\n name \'is\' Kamran"; // it is string
+let word2 = new String("kdjdkjdkjd"); // it is object
+
+console.log(word.length);
+console.log(word.toLocaleUpperCase);
+console.log(word.toLocaleLowerCase);
+console.log(word.trim());   // it deletes spaces from end and start
+console.log(word.trimEnd());
+console.log(word.trimStart());
+console.log(word.indexOf("h")); // it requires char to return the index of first found char
+console.log(word.indexOf("h", 5)); // it requires char and index number  to return the index of first found char after given index 
+console.log(word.includes("my")); // it return true/false if the given value exist within the string
+console.log(word.includes("my",8)); // it return true/false and we can assign position to it it will start search after the given position
+console.log(word.concat(" salam")); // it is combaning given string to existing string
+console.log(word.endsWith("h")); // returns true/false if the existing string ends with given char
+console.log(word.startsWith("d")); // returns true/false if the existing string starts with given char
+console.log(word.split(" ")); // splits the given string and returns massive array
+console.log(word.split(" ").join(",")); // split returns array but after join returns string
+
+console.log(word.slice(0,5)); // returns string takes string from according to given condition first param is start point second param is end but is last param is 5 it will take string from index 4 but not 5
+console.log(word.substring(2)); // it is smilar to slice returns string yo can assign start point and end but also you can work without assigning end point
+console.log(word.substr(2,4)); // first param indicates where you will start second param indicates how many indexies will be taken after start point
+
+// we should focus to our search element and it is start index first check at home
+
+let num = 5.129;
+
+console.log(num.toFixed(1)); // it will round the numbers decimal part according to given condition like rudicing its number
+console.log(word.replace("name", "ipsum")); // it is replacing the desired part of string to given value but only first detected part
+console.log(word.replace(/Name/i, "Slam"));  // it finds word and replaces whether word within string is upper or lower case
+console.log(word.replace(/Name/g, "Slam"));  // it finds "all words" and replaces words
+console.log(word.replace(/Name/gi, "Slam"));  // it finds "all words" and replaces whether word within string is upper or lower case
 
 
