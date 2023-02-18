@@ -100,7 +100,7 @@ let users =[
     {name:"Ayaz", salary: 300}
 ]
 
-let sumSalary = users.filter(user=> user.salary>200).reduce((prev,nect)=>prev.salary+=nex.salary);
+let sumSalary = users.filter(user=> user.salary>200).reduce((prev,next)=>prev.salary+=nex.salary);
 
 // every returns true or false it checkes all elements of the array
 let result = numbers.every((val,index)=> val>20);
@@ -143,5 +143,56 @@ console.log(word.replace("name", "ipsum")); // it is replacing the desired part 
 console.log(word.replace(/Name/i, "Slam"));  // it finds word and replaces whether word within string is upper or lower case
 console.log(word.replace(/Name/g, "Slam"));  // it finds "all words" and replaces words
 console.log(word.replace(/Name/gi, "Slam"));  // it finds "all words" and replaces whether word within string is upper or lower case
+
+const companies = [
+    {
+        name: "Company1",
+        annualRevenue: 30000,
+        createdDate: 1996,
+        terminateDate: 2001
+    },
+    {
+        name: "Company2",
+        annualRevenue: 50000,
+        createdDate: 1993,
+        terminateDate: 2007
+    },
+    {
+        name: "Company3",
+        annualRevenue: 46000,
+        createdDate: 1999,
+        terminateDate: 2009
+    },
+    {
+        name: "Company4",
+        annualRevenue: 123000,
+        createdDate: 1992,
+        terminateDate: 2000
+    },
+    {
+        name: "Company5",
+        annualRevenue: 12500,
+        createdDate: 1996,
+        terminateDate: 2002
+    },
+    {
+        name: "Company6",
+        annualRevenue: 23400,
+        createdDate: 1993,
+        terminateDate: 2009
+    },
+    {
+        name: "Company7",
+        annualRevenue: 45000,
+        createdDate: 1995,
+        terminateDate: 2023
+    }
+]
+
+
+sumSalary = companies.filter(company=> companies.name.includes("com", 0))
+
+
+
 
 
